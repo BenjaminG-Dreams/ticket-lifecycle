@@ -2,57 +2,69 @@
 <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1>osTicket - Ticket Lifecycle: Intake Through Resolution</h1>
-This tutorial outlines the lifecycle of a ticket from intake to resolution within the open-source help desk ticketing system osTicket.<br />
+<h1>osTicket Lifecycle</h1>
+In this tutorial, we will be going over the lifecycle of a ticket from creation to closing in osTicket. This tutorial has prerequisites that must be completed before continuing which will be linked below. </p>
 
-
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: How to create, work, and resolves tickets within osTicket](https://www.youtube.com)
+- [osTicket: Prerequisites and Installation](https://github.com/bvongpradith/osticket-prereqs)
+- [osTicket: Post-Installation Configuration](https://github.com/bvongpradith/osticket--post)
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure
 - Remote Desktop
 - Internet Information Services (IIS)
+- osTicket
+- HeidiSQL
 
 <h2>Operating Systems Used </h2>
 
 - Windows 10</b> (21H2)
 
-<h2>Ticket Lifecycle Stages</h2>
+<h2>Steps</h2>
 
-- Intake
+- Ticket Creation
 - Assignment and Communication
-- Working the Issue
+- Resolving Issue
 - Resolution
 
-<h2>Lifecycle Stages</h2>
+<h2>Detailed Steps</h2>
+
+![Screenshot 2025-01-30 231820](https://github.com/user-attachments/assets/1cf83e2c-5910-405c-8240-584f9b15a26f)
 
 <p>
-STEP 1 : A critical issue has been reported in the Accounting department where two users are unable to access the new Adobe software, preventing them from opening essential files and performing crucial tasks. The affected users have attempted to restart the application, but the problem persists, significantly impacting their daily operations. The IT team has prioritized this issue and is focusing on updating the Adobe software to the latest version to resolve the file access problem.
-</p>
-<p>
-<img width="1512" alt="User Ticket creating" src="https://github.com/user-attachments/assets/c6b7d717-de64-4848-8726-ec594593c92c" />
-
+First, in the VM go to http://localhost/osTicket/ and open a new ticket.
 </p>
 <br />
 
+![Screenshot 2025-01-30 232207](https://github.com/user-attachments/assets/49d15011-d221-430f-a045-608511159281)
+
 <p>
-STEP 2 : To log into the administrator page using the agent account Cori, open your web browser, navigate to the ticketing system's login page, and enter Cori's credentials. Once logged in, locate the ticket for the Accounting department regarding the Adobe software issue and verify that it is marked as "Sev-C," assigned to the "Support" department, and correctly assigned to Cori. Ensure all details, including the Service Level Agreement (SLA), are accurate and document any necessary changes in the ticket notes for future reference. The underlined are the important things that need to be set so anyone can see those important details. 
-</p>
-<p>
-<img width="1512" alt="Screenshot 2025-01-18 at 2 32 50 PM" src="https://github.com/user-attachments/assets/0bda41d7-e38e-41fc-8ba7-ba26fa9e9ebb" />
+Next, use Karen's email and full name for the ticket. Choose a help topic and create a fake scenario that a customer might face. For this tutorial, we will be asking for password reset.
 </p>
 <br />
 
-<p>
-STEP 3 : 
-Cori was assigned as the agent to assist customers experiencing issues accessing the Adobe software. During the call, Cori advised the users to restart their computers as a potential solution. After lunch, the customers called back to inform Cori that the restart was successful and they were now able to access Adobe without any problems. Cori left notes so that anyone can see this after and will be able to see how this issue was resolved. Cori then closed this issue and left another note on how it was solved. 
-</p>
-<p>
-<img width="1512" alt="Screenshot 2025-01-18 at 2 39 45 PM" src="https://github.com/user-attachments/assets/2cf3718b-8974-43c1-8824-1b695c4ec19b" />
-  <img width="1512" alt="Screenshot 2025-01-18 at 2 44 56 PM" src="https://github.com/user-attachments/assets/a0cc6291-dea4-4724-9891-8eed183fb4e9" />
-</p>
 
+![Screenshot 2025-01-30 232852](https://github.com/user-attachments/assets/a47c3439-a5ed-47da-b3d0-954ce1151d82)
+
+<p>
+Now go to http://localhost/osTicket/scp/login.php login as John Doe and go to the Agent Panel.
+</p>
+<br />
+
+
+
+![Screenshot 2025-01-30 232956](https://github.com/user-attachments/assets/0d71c716-adb3-4c89-a4f1-8cc6bf1f0e1c)
+
+![Screenshot 2025-01-30 233408](https://github.com/user-attachments/assets/1fac0ea1-8da4-49c6-aa02-e11a027ec4a7)
+
+
+<p>
+Afterwards, navigate to the tickets panel and select the ticket you created. Assign the ticket to either a user or admin and set the SLA plan to SEV-C since it can be done on a weekday when the customer will need to log in. Depending on the severity of the ticket, it will be assigned differently. But for this example, I will put the priority low, department: support, Assigned to: John Doe, and the SLA Plan: Sev-C.
+</p>
+<br />
+
+![Screenshot 2025-01-30 233451](https://github.com/user-attachments/assets/6cf20b71-3d67-4d80-a5c1-e9f88080b1fc)
+
+<p>
+Finally, you will be able to respond to the ticket and decide if it can be resolved or stay open. 
 <br />
